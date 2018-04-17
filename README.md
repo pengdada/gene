@@ -1,6 +1,7 @@
 # Project Title
 
 cuda-eagle
+
 my work is in the folder ./eagle/cudalib
 
 ## Getting Started
@@ -17,4 +18,4 @@ download original eagle form
 ```
 https://github.com/tony-kuo/eagle
 ```
-to overwrite ./eagle folder
+and overwrite ./eagle folder
