@@ -10,9 +10,9 @@ build and tested on DGX-1, using V100 (sm_70)
 
 go to folder ./eagle/cudalib
 
-make
+      make
 
-./bin/demo
+     ./bin/demo
 
 
 ### Prerequisites
