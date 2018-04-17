@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{938b1c2f-204e-425e-839f-1fac9b2af45f}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>dev</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{FC1A4D80-50E9-41DA-9192-61C0DBAA00D2}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>/raid/home/chen/projects</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemoteBuildCommandLine>cd $(RemoteRootDir)/$(ProjectName)/dev &amp;&amp; pwd &amp;&amp; make DEBUG=1</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>cd $(RemoteRootDir)/$(ProjectName)/dev &amp;&amp; pwd &amp;&amp; make DEBUG=1 &amp;&amp; make clean all</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd $(RemoteRootDir)/$(ProjectName)/dev &amp;&amp; pwd &amp;&amp; make clean</RemoteCleanCommandLine>
+    <RemoteBuildOutputs>$(RemoteRootDir)/$(ProjectName)/eagle/eagle</RemoteBuildOutputs>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\eagle\.eagle.c.swp" />
+    <None Include="..\eagle\COPYING" />
+    <None Include="..\eagle\cudalib\cudaCalc.cu" />
+    <None Include="..\eagle\cudalib\Makefile">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\eagle\eagle-nm" />
+    <None Include="..\eagle\htslib\.appveyor.yml" />
+    <None Include="..\eagle\htslib\.gitattributes" />
+    <None Include="..\eagle\htslib\.gitignore" />
+    <None Include="..\eagle\htslib\.travis.yml" />
+    <None Include="..\eagle\htslib\bcf_sr_sort.pico" />
+    <None Include="..\eagle\htslib\bgzf.pico" />
+    <None Include="..\eagle\htslib\bgzip" />
+    <None Include="..\eagle\htslib\bgzip.1" />
+    <None Include="..\eagle\htslib\config.mk.in" />
+    <None Include="..\eagle\htslib\configure.ac" />
+    <None Include="..\eagle\htslib\errmod.pico" />
+    <None Include="..\eagle\htslib\faidx.5" />
+    <None Include="..\eagle\htslib\faidx.pico" />
+    <None Include="..\eagle\htslib\hfile.pico" />
+    <None Include="..\eagle\htslib\hfile_net.pico" />
+    <None Include="..\eagle\htslib\hts.pico" />
+    <None Include="..\eagle\htslib\htsfile" />
+    <None Include="..\eagle\htslib\htsfile.1" />
+    <None Include="..\eagle\htslib\htslib.mk" />
+    <None Include="..\eagle\htslib\htslib.pc.in" />
+    <None Include="..\eagle\htslib\htslib_vars.mk" />
+    <None Include="..\eagle\htslib\hts_os.pico" />
+    <None Include="..\eagle\htslib\INSTALL" />
+    <None Include="..\eagle\htslib\kfunc.pico" />
+    <None Include="..\eagle\htslib\knetfile.pico" />
+    <None Include="..\eagle\htslib\kstring.pico" />
+    <None Include="..\eagle\htslib\libhts.so.2" />
+    <None Include="..\eagle\htslib\LICENSE" />
+    <None Include="..\eagle\htslib\Makefile" />
+    <None Include="..\eagle\htslib\md5.pico" />
+    <None Include="..\eagle\htslib\multipart.pico" />
+    <None Include="..\eagle\htslib\NEWS" />
+    <None Include="..\eagle\htslib\probaln.pico" />
+    <None Include="..\eagle\htslib\README" />
+    <None Include="..\eagle\htslib\README.md" />
+    <None Include="..\eagle\htslib\realn.pico" />
+    <None Include="..\eagle\htslib\regidx.pico" />
+    <None Include="..\eagle\htslib\sam.5" />
+    <None Include="..\eagle\htslib\sam.pico" />
+    <None Include="..\eagle\htslib\synced_bcf_reader.pico" />
+    <None Include="..\eagle\htslib\tabix" />
+    <None Include="..\eagle\htslib\tabix.1" />
+    <None Include="..\eagle\htslib\tbx.pico" />
+    <None Include="..\eagle\htslib\textutils.pico" />
+    <None Include="..\eagle\htslib\thread_pool.pico" />
+    <None Include="..\eagle\htslib\vcf.5" />
+    <None Include="..\eagle\htslib\vcf.pico" />
+    <None Include="..\eagle\htslib\vcfutils.pico" />
+    <None Include="..\eagle\htslib\vcf_sweep.pico" />
+    <None Include="..\eagle\htslib\version.sh" />
+    <None Include="..\eagle\Makefile" />
+    <None Include="..\eagle\README.md" />
+    <None Include="db.sh" />
+    <None Include="Makefile" />
+    <None Include="run.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\eagle\cudalib\cpuCalc.cpp" />
+    <ClCompile Include="..\eagle\cudalib\demo.cpp" />
+    <ClCompile Include="..\eagle\eagle-nm.c" />
+    <ClCompile Include="..\eagle\eagle-rc.c" />
+    <ClCompile Include="..\eagle\eagle.c" />
+    <ClCompile Include="..\eagle\heap.c" />
+    <ClCompile Include="..\eagle\htslib\bcf_sr_sort.c" />
+    <ClCompile Include="..\eagle\htslib\bgzf.c" />
+    <ClCompile Include="..\eagle\htslib\bgzip.c" />
+    <ClCompile Include="..\eagle\htslib\errmod.c" />
+    <ClCompile Include="..\eagle\htslib\faidx.c" />
+    <ClCompile Include="..\eagle\htslib\hfile.c" />
+    <ClCompile Include="..\eagle\htslib\hfile_gcs.c" />
+    <ClCompile Include="..\eagle\htslib\hfile_libcurl.c" />
+    <ClCompile Include="..\eagle\htslib\hfile_net.c" />
+    <ClCompile Include="..\eagle\htslib\hfile_s3.c" />
+    <ClCompile Include="..\eagle\htslib\hts.c" />
+    <ClCompile Include="..\eagle\htslib\htsfile.c" />
+    <ClCompile Include="..\eagle\htslib\hts_os.c" />
+    <ClCompile Include="..\eagle\htslib\kfunc.c" />
+    <ClCompile Include="..\eagle\htslib\knetfile.c" />
+    <ClCompile Include="..\eagle\htslib\kstring.c" />
+    <ClCompile Include="..\eagle\htslib\md5.c" />
+    <ClCompile Include="..\eagle\htslib\multipart.c" />
+    <ClCompile Include="..\eagle\htslib\plugin.c" />
+    <ClCompile Include="..\eagle\htslib\probaln.c" />
+    <ClCompile Include="..\eagle\htslib\realn.c" />
+    <ClCompile Include="..\eagle\htslib\regidx.c" />
+    <ClCompile Include="..\eagle\htslib\sam.c" />
+    <ClCompile Include="..\eagle\htslib\synced_bcf_reader.c" />
+    <ClCompile Include="..\eagle\htslib\tabix.c" />
+    <ClCompile Include="..\eagle\htslib\tbx.c" />
+    <ClCompile Include="..\eagle\htslib\textutils.c" />
+    <ClCompile Include="..\eagle\htslib\thread_pool.c" />
+    <ClCompile Include="..\eagle\htslib\vcf.c" />
+    <ClCompile Include="..\eagle\htslib\vcfutils.c" />
+    <ClCompile Include="..\eagle\htslib\vcf_sweep.c" />
+    <ClCompile Include="..\eagle\util.c" />
+    <ClCompile Include="..\eagle\vector.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\eagle\cudalib\cudaCalc.h" />
+    <ClInclude Include="..\eagle\cudalib\cudaLib.h" />
+    <ClInclude Include="..\eagle\cudalib\myutility.h" />
+    <ClInclude Include="..\eagle\eagle.h" />
+    <ClInclude Include="..\eagle\heap.h" />
+    <ClInclude Include="..\eagle\htslib\bcf_sr_sort.h" />
+    <ClInclude Include="..\eagle\htslib\config.h" />
+    <ClInclude Include="..\eagle\htslib\hfile_internal.h" />
+    <ClInclude Include="..\eagle\htslib\hts_internal.h" />
+    <ClInclude Include="..\eagle\htslib\textutils_internal.h" />
+    <ClInclude Include="..\eagle\htslib\thread_pool_internal.h" />
+    <ClInclude Include="..\eagle\htslib\version.h" />
+    <ClInclude Include="..\eagle\util.h" />
+    <ClInclude Include="..\eagle\vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\eagle\htslib\bcf_sr_sort.o" />
+    <Object Include="..\eagle\htslib\bgzf.o" />
+    <Object Include="..\eagle\htslib\bgzip.o" />
+    <Object Include="..\eagle\htslib\errmod.o" />
+    <Object Include="..\eagle\htslib\faidx.o" />
+    <Object Include="..\eagle\htslib\hfile.o" />
+    <Object Include="..\eagle\htslib\hfile_net.o" />
+    <Object Include="..\eagle\htslib\hts.o" />
+    <Object Include="..\eagle\htslib\htsfile.o" />
+    <Object Include="..\eagle\htslib\hts_os.o" />
+    <Object Include="..\eagle\htslib\kfunc.o" />
+    <Object Include="..\eagle\htslib\knetfile.o" />
+    <Object Include="..\eagle\htslib\kstring.o" />
+    <Object Include="..\eagle\htslib\md5.o" />
+    <Object Include="..\eagle\htslib\multipart.o" />
+    <Object Include="..\eagle\htslib\probaln.o" />
+    <Object Include="..\eagle\htslib\realn.o" />
+    <Object Include="..\eagle\htslib\regidx.o" />
+    <Object Include="..\eagle\htslib\sam.o" />
+    <Object Include="..\eagle\htslib\synced_bcf_reader.o" />
+    <Object Include="..\eagle\htslib\tabix.o" />
+    <Object Include="..\eagle\htslib\tbx.o" />
+    <Object Include="..\eagle\htslib\textutils.o" />
+    <Object Include="..\eagle\htslib\thread_pool.o" />
+    <Object Include="..\eagle\htslib\vcf.o" />
+    <Object Include="..\eagle\htslib\vcfutils.o" />
+    <Object Include="..\eagle\htslib\vcf_sweep.o" />
+    <Object Include="..\eagle\vector.o" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\eagle\htslib\libhts.a" />
+    <Library Include="..\eagle\htslib\libhts.so" />
+  </ItemGroup>
+  <ItemDefinitionGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

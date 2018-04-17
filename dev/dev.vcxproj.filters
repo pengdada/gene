@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="eagle">
+      <UniqueIdentifier>{234af506-e17a-4632-9eb8-604518b90286}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dev">
+      <UniqueIdentifier>{684ced29-30e8-4818-b9d6-73113f861d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eagle\htslib">
+      <UniqueIdentifier>{7ae1e53f-9248-47bd-bd13-c43be0a21e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eagle\cudalib">
+      <UniqueIdentifier>{baba8d53-b08d-411f-bba1-8158aab3a077}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\eagle\.eagle.c.swp">
+      <Filter>eagle</Filter>
+    </None>
+    <None Include="..\eagle\COPYING">
+      <Filter>eagle</Filter>
+    </None>
+    <None Include="..\eagle\eagle-nm">
+      <Filter>eagle</Filter>
+    </None>
+    <None Include="..\eagle\Makefile">
+      <Filter>eagle</Filter>
+    </None>
+    <None Include="..\eagle\README.md">
+      <Filter>eagle</Filter>
+    </None>
+    <None Include="db.sh">
+      <Filter>dev</Filter>
+    </None>
+    <None Include="Makefile">
+      <Filter>dev</Filter>
+    </None>
+    <None Include="run.sh">
+      <Filter>dev</Filter>
+    </None>
+    <None Include="..\eagle\htslib\.appveyor.yml">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\.gitattributes">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\.gitignore">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\.travis.yml">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\bcf_sr_sort.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\bgzf.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\bgzip">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\bgzip.1">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\config.mk.in">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\configure.ac">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\errmod.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\faidx.5">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\faidx.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\hfile.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\hfile_net.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\hts.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\hts_os.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\htsfile">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\htsfile.1">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\htslib.mk">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\htslib.pc.in">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\htslib_vars.mk">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\INSTALL">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\kfunc.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\knetfile.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\kstring.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\libhts.so.2">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\LICENSE">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\Makefile">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\md5.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\multipart.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\NEWS">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\probaln.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\README">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\README.md">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\realn.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\regidx.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\sam.5">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\sam.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\synced_bcf_reader.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\tabix">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\tabix.1">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\tbx.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\textutils.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\thread_pool.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\vcf.5">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\vcf.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\vcf_sweep.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\vcfutils.pico">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\htslib\version.sh">
+      <Filter>eagle\htslib</Filter>
+    </None>
+    <None Include="..\eagle\cudalib\cudaCalc.cu">
+      <Filter>eagle\cudalib</Filter>
+    </None>
+    <None Include="..\eagle\cudalib\Makefile">
+      <Filter>eagle\cudalib</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\eagle\eagle.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\eagle-nm.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\eagle-rc.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\heap.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\util.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\vector.c">
+      <Filter>eagle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\bcf_sr_sort.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\bgzf.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\bgzip.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\errmod.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\faidx.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hfile.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hfile_gcs.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hfile_libcurl.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hfile_net.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hfile_s3.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hts.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\hts_os.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\htsfile.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\kfunc.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\knetfile.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\kstring.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\md5.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\multipart.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\plugin.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\probaln.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\realn.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\regidx.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\sam.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\synced_bcf_reader.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\tabix.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\tbx.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\textutils.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\thread_pool.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\vcf.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\vcf_sweep.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\htslib\vcfutils.c">
+      <Filter>eagle\htslib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\cudalib\cpuCalc.cpp">
+      <Filter>eagle\cudalib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\eagle\cudalib\demo.cpp">
+      <Filter>eagle\cudalib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\eagle\eagle.h">
+      <Filter>eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\heap.h">
+      <Filter>eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\util.h">
+      <Filter>eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\vector.h">
+      <Filter>eagle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\bcf_sr_sort.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\config.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\hfile_internal.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\hts_internal.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\textutils_internal.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\thread_pool_internal.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\htslib\version.h">
+      <Filter>eagle\htslib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\cudalib\cudaCalc.h">
+      <Filter>eagle\cudalib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\cudalib\cudaLib.h">
+      <Filter>eagle\cudalib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\eagle\cudalib\myutility.h">
+      <Filter>eagle\cudalib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="..\eagle\vector.o">
+      <Filter>eagle</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\bcf_sr_sort.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\bgzf.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\bgzip.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\errmod.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\faidx.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\hfile.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\hfile_net.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\hts.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\hts_os.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\htsfile.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\kfunc.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\knetfile.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\kstring.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\md5.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\multipart.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\probaln.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\realn.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\regidx.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\sam.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\synced_bcf_reader.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\tabix.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\tbx.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\textutils.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\thread_pool.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\vcf.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\vcf_sweep.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+    <Object Include="..\eagle\htslib\vcfutils.o">
+      <Filter>eagle\htslib</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\eagle\htslib\libhts.a">
+      <Filter>eagle\htslib</Filter>
+    </Library>
+    <Library Include="..\eagle\htslib\libhts.so">
+      <Filter>eagle\htslib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
