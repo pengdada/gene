@@ -11,7 +11,7 @@ CXXFLAGS := -std=c++11 -Wall
 sm := 70
 NVCCFLAGS :=--std=c++11 -m64 -Xcompiler -Wall -Xptxas -v -Wno-deprecated-gpu-targets 
 NVCCFLAGS +=-gencode arch=compute_$(sm),code=sm_$(sm)
-NVCC_LDFLAGS = -lcudart -L$(CUDA_HOME)/lib64
+NVCC_LDFLAGS = -lcudart -lcublas -L$(CUDA_HOME)/lib64
 # Compilation flags
 ifeq ($(DEBUG), 1)
 	CXXFLAGS += -g
