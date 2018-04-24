@@ -14,6 +14,20 @@ inline double log_add_exp(double a, double b) {
 	return log(exp(a - max_exp) + exp(b - max_exp)) + max_exp;
 }
 
+
+inline double log_sum_exp(const double *a, size_t size) {
+	int i;
+	double max_exp = a[0];
+	for (i = 1; i < size; i++) {
+		if (a[i] > max_exp) max_exp = a[i];
+	}
+	std::cout << "log_sum_exp::max_val=" << max_exp << std::endl;
+	double s = 0;
+	for (i = 0; i < size; i++) s += exp(a[i] - max_exp);
+	return log(s) + max_exp;
+}
+
+
 template<typename T> inline
 void Transpose(const T* src, int src_width, int src_height, T* dst, int dst_width, int dst_height) {
 	int _dst_height = MIN2(dst_height, src_width);

@@ -75,7 +75,8 @@ void TestCpu()
 	}
 	
 	high_resolution_clock::time_point t1 = high_resolution_clock::now();
-	double prob= Cpu::calc_prob_region(seq_map, matrix, read_length, seq, seq_length, pos, start, end);
+	//double prob= Cpu::calc_prob_region(seq_map, matrix, read_length, seq, seq_length, pos, start, end);
+	double prob = Cpu::calc_prob_region_log_sum_exp(seq_map, matrix, read_length, seq, seq_length, pos, start, end);
 	high_resolution_clock::time_point t2 = high_resolution_clock::now();
 	long long duration = duration_cast<milliseconds>(t2 - t1).count();
 	
@@ -124,7 +125,8 @@ void TestGpu()
 	handle hdl = Gpu::create(seq_length / _READ_LENGTH, seq_length, seq_map,  vec_seq_map.size(), matrix, vec_matrix.size());
 
 	high_resolution_clock::time_point t1 = high_resolution_clock::now();
-	double prob = Gpu::calc_prob_region(hdl, read_length, seq, seq_length, start, end);
+	//double prob = Gpu::calc_prob_region(hdl, read_length, seq, seq_length, start, end);
+	double prob = Gpu::calc_prob_region_log_sum_exp(hdl, read_length, seq, seq_length, start, end);
 	high_resolution_clock::time_point t2 = high_resolution_clock::now();
 	long long duration = duration_cast<milliseconds>(t2 - t1).count();
 

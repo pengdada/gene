@@ -8,6 +8,17 @@
 #include "myutility.h"
 #include <chrono>
 #include <string.h>
+#ifdef _WIN32
+#pragma comment(lib, "cublas.lib")
+#endif
+#include "cublas_v2.h"
+#include <thrust/transform_reduce.h>
+#include <thrust/functional.h>
+#include <thrust/device_vector.h>
+#include <thrust/host_vector.h>
+#include <thrust/extrema.h>
+#include <cmath>
+
 using namespace std;
 using namespace std::chrono;
 
@@ -72,11 +83,16 @@ namespace Gpu {
 			devSeq.MallocBuffer(nSeq, 1, 1);
 			vec_matrix.resize(_NT_CODES*ALIGNED_READ_LENGTH);
 			vec_prob.resize(nProb);
+			cublasCreate(&cublasHandle);
+		}
+		virtual ~Mem() {
+			if (cublasHandle) cublasDestroy(cublasHandle);
 		}
 		DevData<double> devProb;
 		DevData<char>   devSeq;
 		std::vector<double> vec_matrix;
 		std::vector<double> vec_prob;
+		cublasHandle_t cublasHandle;
 	};
 	handle create(int nProb, int nSeq,  const int* seqnt_map, int seqnt_map_size, const double* matrix, int matrix_size) {
 		Mem* p = new Mem(nProb, nSeq);
@@ -140,4 +156,57 @@ namespace Gpu {
 		}
 		return probability;
 	}
+
+	template<typename T>
+	struct sub_exp_op
+	{
+		const T a;
+		sub_exp_op(T _a) : a(_a) {}
+		__host__ __device__ T operator()(const T& x) const {
+			return exp(x - a);
+		}
+	};
+	double calc_prob_region_log_sum_exp(handle hdl, int read_length, const char *seq, int seq_length, int start, int end){
+		Mem* pMem = (Mem*)hdl;
+		double probability = 0;
+		assert(start == 0);
+		assert(end > start);
+		dim3 threads(1024, 1, 1);
+		int warps = threads.x / WarpSize;
+		dim3 blocks(UpDivide(end, warps), 1, 1);
+		pMem->devSeq.CopyFromHost(seq, seq_length, seq_length, 1, 1);
+		kernel_calc_prob_region << <blocks, threads >> >(pMem->devProb.GetData(), pMem->devSeq.GetData(), seq_length, read_length, end - start);
+		cudaDeviceSynchronize();
+		CUDA_CHECK_ERROR;
+		//pMem->devProb.CopyToHost(&pMem->vec_prob[0], pMem->vec_prob.size(), pMem->vec_prob.size(), 1, 1);
+		//{
+		//	int i;
+		//	double max_exp = pMem->vec_prob[0];
+		//	for (i = 1; i < pMem->vec_prob.size(); i++) {
+		//		if (pMem->vec_prob[i] > max_exp) max_exp = pMem->vec_prob[i];
+		//	}
+		//	std::cout << "max_exp = " << max_exp << std::endl;
+//#ifdef _DEBUG
+//		write_file("./pMem.vec.prob.bin", &pMem->vec_prob[0], pMem->vec_prob.size() * sizeof(pMem->vec_prob[0]));
+//#endif // _DEBUG
+		//}
+
+		//int max_idx = -1;
+		double max_val = 0;
+		
+		thrust::device_ptr<double> devPtr(pMem->devProb.GetData());
+
+		max_val = *thrust::max_element(devPtr, devPtr + pMem->devProb.width);
+		std::cout << "max_val = " << max_val << std::endl;
+
+		// setup arguments
+		sub_exp_op<double> unary_op(max_val);
+		thrust::plus<double> binary_op;
+		double init = 0;
+		// compute norm
+		probability = max_val + log(thrust::transform_reduce(devPtr, devPtr + pMem->devProb.width, unary_op, init, binary_op));
+		std::cout<<"trust::log_sum_exp="<<probability<<std::endl;
+		return probability;
+	}
+
 }
